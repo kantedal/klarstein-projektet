@@ -1,22 +1,24 @@
-import * as React from 'react';
-import './App.css';
+import './App.css'
 
-import logo from './logo.svg';
+import * as React from 'react'
+import { Redirect, Route, Switch } from 'react-router'
+import { BrowserRouter } from 'react-router-dom'
+
+import AddBeers from './AddBeers/AddBeers'
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <div className='App'>
+        <BrowserRouter>
+          <Switch>
+            <Route path='/addBeers' component={AddBeers} />
+            <Redirect from='/' to='/addBeers' exact={true} />
+          </Switch>
+        </BrowserRouter>
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

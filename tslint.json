@@ -21,6 +21,7 @@
       "jsdoc-require": [
         false
       ],
+      "no-import-side-effect": false,
       "type-literal-delimiter": false,
       "no-implicit-dependencies": false,
       "socialCompetences": false,

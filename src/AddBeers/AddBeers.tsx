@@ -6,8 +6,7 @@ namespace AddBeers {
 }
 
 class AddBeers extends React.Component<AddBeers.Props, AddBeers.State> {
-  state: AddBeers
-.State = {}
+  state: AddBeers.State = {}
   
   render() {
     const {} = this.props

@@ -5,6 +5,7 @@ import { Redirect, Route, Switch } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
 
 import AddBeers from './AddBeers/AddBeers'
+import Pay from './Pay/Pay'
 
 class App extends React.Component {
   public render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
         <BrowserRouter>
           <Switch>
             <Route path='/addBeers' component={AddBeers} />
+            <Route path='/pay' component={Pay} />
             <Redirect from='/' to='/addBeers' exact={true} />
           </Switch>
         </BrowserRouter>

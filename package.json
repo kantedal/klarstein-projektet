@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^1.1.0",
+    "material-ui": "^1.0.0-beta.43",    
     "axios": "^0.18.0",
     "qrcode.react": "^0.8.0",
     "react": "^16.4.0",
@@ -19,10 +19,10 @@
     "@types/react-dom": "^16.0.5",
     "@types/react-router": "^4.0.25",
     "@types/react-router-dom": "^4.2.6",
-    "react-scripts-ts": "2.16.0",
+    "react-scripts-ts": "2.15.0",
     "tslint-microsoft-contrib": "^5.0.3",
     "tslint-react": "^3.6.0",
-    "typescript": "^2.8.3"
+    "typescript": "2.7.2"
   },
   "scripts": {
     "start": "react-scripts-ts start",

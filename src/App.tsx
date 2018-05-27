@@ -4,9 +4,6 @@ import * as React from 'react'
 import { Redirect, Route, Switch } from 'react-router'
 import { BrowserRouter } from 'react-router-dom'
 
-import AddBeers from './AddBeers/AddBeers'
-import Pay from './Pay/Pay'
-
 class App extends React.Component {
   public render() {
     return (
@@ -21,6 +18,7 @@ class App extends React.Component {
       </div>
     )
   }
+  
 }
 
 export default App

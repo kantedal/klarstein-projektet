@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Input } from '@material-ui/core'
+import { Input } from 'material-ui'
 import './SearchBar.css'
 
 namespace SearchBar {

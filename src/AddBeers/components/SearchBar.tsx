@@ -8,7 +8,7 @@ namespace SearchBar {
 const SearchBar: React.SFC<SearchBar.Props> = (props) => {
   const { children } = props
   return (
-    <div className={styles.container}>
+    <div className={'nice'}>
       {children}
     </div>
   )

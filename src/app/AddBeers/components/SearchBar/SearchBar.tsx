@@ -1,17 +1,24 @@
+import { Input } from 'material-ui'
 import * as React from 'react'
-// import { Input } from 'material-ui's
+
 import * as styles from './SearchBar.css'
 
+// import { Input } from 'material-ui's
 namespace SearchBar {
-  export interface Props {}
+  export interface Props {
+    onChange: (value: string) => void
+  }
 }
 
 const SearchBar: React.SFC<SearchBar.Props> = (props) => {
-  const { children } = props
+  const { onChange } = props
+
+  const inputChange = (e: any) => onChange(e.target.value)
+
   return (
-    <div className={'searchbar-container'}>
-      <i className={`material-icons searchbar-icon`}>search</i>
-      {/* <Input placeholder={'Sökfras...'} disableUnderline={true} style={{ height: '40px' }}/> */}
+    <div className={styles.searchbarContainer}>
+      <i className={`material-icons ${styles.searchbarIcon}`}>search</i>
+      <Input placeholder={'Sökfras...'} disableUnderline={true} onChange={inputChange} style={{ height: '40px' }}/>
     </div>
   )
 }

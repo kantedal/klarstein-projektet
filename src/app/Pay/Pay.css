@@ -1,18 +1,26 @@
-.pay-container {
+.container {
   width: 100vw;
   height: 100vh;
   background: url('https://www.wallpapersbrowse.com/images/iy/iynoehd.jpg');
   background-size: cover;
+  
 }
-.pay-button {
+.qrContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 80px);
+}
+.button {
   max-width: 350px;
   flex: 1;
   height: 20vh;
   max-height: 80px;
 }
-.buttons-container {
+.buttonsContainer {
   position: absolute;
-  bottom: 10;
+  bottom: 10px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;

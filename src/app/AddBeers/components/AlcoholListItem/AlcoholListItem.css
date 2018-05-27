@@ -13,3 +13,7 @@
   margin-right: 100px;
   margin-left: 100px;
 }
+
+.alcoholColumn {
+  flex: 1;
+}

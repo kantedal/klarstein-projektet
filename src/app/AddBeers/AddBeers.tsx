@@ -51,8 +51,8 @@ class AddBeers extends React.Component<AddBeers.Props, AddBeers.State> {
   componentDidMount() {
     const data = require('xml-loader!./alcohol.xml')
     const alcoholItems = data.artiklar.artikel
-      .filter((article: any) => article.Varugrupp[0] === 'Öl')
-      .map((article: any) => {
+      .filter((article: Article) => article.Varugrupp[0] === 'Öl' && article.Forpackning[0] !== 'Fat')
+      .map((article: Article) => {
         const newObj = {}
         for (const key of Object.keys(article)) {
           newObj[key] = !isNaN(Number(article[key][0])) ? Number(article[key][0]) : article[key][0]

@@ -1,0 +1,20 @@
+.pay-container {
+  width: 100vw;
+  height: 100vh;
+  background: url('https://www.wallpapersbrowse.com/images/iy/iynoehd.jpg');
+  background-size: cover;
+}
+.pay-button {
+  max-width: 350px;
+  flex: 1;
+  height: 20vh;
+  max-height: 80px;
+}
+.buttons-container {
+  position: absolute;
+  bottom: 10;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

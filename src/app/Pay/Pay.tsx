@@ -3,6 +3,8 @@ import * as React from 'react'
 import Button from 'material-ui/Button'
 import * as classes from './Pay.css'
 import * as QRCode from 'qrcode.react'
+import {OrderContext} from '../providers/OrderProvider'
+
 namespace Pay {
   export interface Props {
   }
@@ -33,22 +35,26 @@ class Pay extends React.Component<Pay.Props, Pay.State> {
   }
   render () {
     const {} = this.props
-    const qrData = this.createQrData(ordersList)
-    console.log(qrData)
     return (
-      <div className={classes.container}>
-        <div className={classes.qrContainer}>
-          <QRCode value={qrData} size={256}/>
-        </div>
-        <div className={classes.buttonsContainer}>
-           <Button variant='raised' color='secondary' style={{backgroundColor: '#424dbf', color: 'white'}} className={classes.button}>
-            Bakåt
-          </Button>
-          <Button variant='raised' color='primary' className={classes.button}>
-            OK
-          </Button>
-        </div>
-      </div>
+      <OrderContext.Consumer>
+        {(data) => 
+          (
+            <div className={classes.container}>
+              <div className={classes.qrContainer}>
+                <QRCode value={this.createQrData(data.orderList)} size={256}/>
+              </div>
+              <div className={classes.buttonsContainer}>
+                <Button variant='raised' color='secondary' style={{backgroundColor: '#424dbf', color: 'white'}} className={classes.button}>
+                  Bakåt
+                </Button>
+                <Button variant='raised' color='primary' className={classes.button} onClick={() => data.actions.reset()}>
+                  OK
+                </Button>
+              </div>
+            </div>
+          )
+        }
+      </OrderContext.Consumer>
     )
   }
 }
